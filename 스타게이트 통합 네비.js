@@ -16,7 +16,7 @@
     },
     blog: {
       name: "스타게이트 블로그",
-      url: "https://blog.stargateshop.co.kr",
+      url: "https://blog.stargateedu.co.kr",
       label: "블로그",
       tag: "STARGATE BLOG",
     },
@@ -96,8 +96,8 @@
     <div class="sg-footer__col">
       <h4>주식회사 별의문 (Stargate Corporation)</h4>
       <p style="margin:4px 0;line-height:1.7">
-        대표 김동수 | 서울 강남구 대치동<br>
-        <a href="mailto:ceo@stargate11.com">ceo@stargate11.com</a><br>
+        대표 정동수 | 서울시 강남구 대치동 930-21, 2층<br>
+        <a href="mailto:ceo@stargateedu.co.kr">ceo@stargateedu.co.kr</a><br>
         <a href="mailto:info@stargate11.com">info@stargate11.com</a>
       </p>
     </div>
@@ -120,7 +120,7 @@
   </div>
   <div class="sg-footer__bottom">
     <span>© 2026 Stargate Corporation. All rights reserved.</span>
-    <span>주식회사 별의문 · 사업자등록 (예정)</span>
+    <span>주식회사 별의문 · 사업자등록번호 848-86-03835</span>
   </div>
 </footer>`;
   }
