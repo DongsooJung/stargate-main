@@ -2,7 +2,7 @@
    STARGATE 통합 네비게이션 — JS 자동 주입 컴포넌트
    각 사이트 <body> 시작 직후 또는 끝부분에 다음 한 줄만 추가:
      <script src="/스타게이트 통합 네비.js" data-site="main"></script>
-   data-site 값: "main" | "blog" | "shop"
+   data-site 값: "main" | "blog" | "shop" | "edushop"
    ============================================================ */
 
 (function () {
@@ -16,7 +16,7 @@
     },
     blog: {
       name: "스타게이트 블로그",
-      url: "https://blog.stargateedu.co.kr",
+      url: "https://blog.stargateshop.co.kr",
       label: "블로그",
       tag: "STARGATE BLOG",
     },
@@ -25,6 +25,12 @@
       url: "https://stargateshop.co.kr",
       label: "쇼핑몰",
       tag: "STARGATE SHOP",
+    },
+    edushop: {
+      name: "스타게이트 에듀 스토어",
+      url: "https://shop.stargateedu.co.kr",
+      label: "에듀 스토어",
+      tag: "STARGATE EDU SHOP",
     },
   };
 
@@ -35,6 +41,7 @@
   function detectSite() {
     const h = location.hostname;
     if (h.startsWith("blog.")) return "blog";
+    if (h.startsWith("shop.stargateedu")) return "edushop";
     if (h.includes("stargateshop")) return "shop";
     return "main";
   }
@@ -96,8 +103,8 @@
     <div class="sg-footer__col">
       <h4>주식회사 별의문 (Stargate Corporation)</h4>
       <p style="margin:4px 0;line-height:1.7">
-        대표 정동수 | 서울시 강남구 대치동 930-21, 2층<br>
-        <a href="mailto:ceo@stargateedu.co.kr">ceo@stargateedu.co.kr</a><br>
+        대표 김동수 | 서울 강남구 대치동<br>
+        <a href="mailto:ceo@stargate11.com">ceo@stargate11.com</a><br>
         <a href="mailto:info@stargate11.com">info@stargate11.com</a>
       </p>
     </div>
@@ -109,6 +116,7 @@
       <h4>사업영역</h4>
       <a href="${SITES.main.url}">AI · 공간계량</a>
       <a href="${SITES.shop.url}">디지털 상품</a>
+      <a href="${SITES.edushop.url}">교육 스토어</a>
       <a href="${SITES.blog.url}">연구 블로그</a>
     </div>
     <div class="sg-footer__col">
@@ -120,7 +128,7 @@
   </div>
   <div class="sg-footer__bottom">
     <span>© 2026 Stargate Corporation. All rights reserved.</span>
-    <span>주식회사 별의문 · 사업자등록번호 848-86-03835</span>
+    <span>주식회사 별의문 · 사업자등록 (예정)</span>
   </div>
 </footer>`;
   }
