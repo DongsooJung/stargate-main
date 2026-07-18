@@ -1,12 +1,12 @@
 # STARGATE 본사
 
-www.stargate11.com 정적 사이트 (GitHub Pages 호스팅).
+portal.stargateedu.co.kr 정적 사이트 (GitHub Pages 호스팅).
 
 ## 구성
 - `index.html` — 페이지 본문
 - `스타게이트 통합 네비.css` — 공통 디자인 (3사이트 동일)
 - `스타게이트 통합 네비.js` — 헤더·푸터·Cross-link 자동 주입
-- `CNAME` — GitHub Pages 커스텀 도메인 (`www.stargate11.com`)
+- `CNAME` — GitHub Pages 커스텀 도메인 (`portal.stargateedu.co.kr`)
 - `.nojekyll` — Jekyll 처리 비활성화
 
 ## 수정·재배포
