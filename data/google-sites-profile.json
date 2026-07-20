@@ -1,0 +1,126 @@
+{
+  "source": {
+    "name": "Dongsoo Jung · Google Sites",
+    "url": "https://sites.google.com/view/jungdongsoo",
+    "educationUrl": "https://sites.google.com/view/jungdongsoo/education"
+  },
+  "affiliations": [
+    "GRI Researcher , GRI (2024.4 ~ 2024.10)",
+    "SNU CEE Researcher, SNU(2022. 3 ~ 2024. 3)",
+    "KIPA Researcher, KIPA(2021. 8 ~ 2021. 10)",
+    "SNU GSPA Researcher, SNU(2018. 3 ~ 2021. 2)",
+    "First Lieutenant, Republic of Korea Air Force (2012.12~2015.11)"
+  ],
+  "education": [
+    "Seoul National University, Ph. D. in Urban Planning(Smart City Engineering)(2022.3~)",
+    "Seoul National University, M.A. in Public Administration & Policy(2018.3~2022.2)",
+    "University of North Korean Studies, M. A in North Korea Economic & IT(2015.3~2017 2)",
+    "Seoul National University, B.A. in Civil & Urban & Geosystem Engineerning(2006.3~2012.8)"
+  ],
+  "courseGroups": [
+    {
+      "title": "서울대 지구환경시스템공학 학부 수강 내역",
+      "courses": [
+        "수학 및 연습 1",
+        "물리학 1",
+        "물리학실험 1",
+        "창의공학 설계",
+        "신입생 세미나",
+        "대학국어",
+        "수학 및 연습 2",
+        "물리학 2",
+        "통계학실험",
+        "물리학실험 2",
+        "공학제도 및 CAD",
+        "건설공학리더십",
+        "공학수학 1",
+        "컴퓨터의 기초",
+        "도시계획",
+        "경제학 개론",
+        "현대종교와 문화",
+        "세계종교입문",
+        "공학수학 2",
+        "한국정치의 분석과 이해",
+        "경제원론 2",
+        "노동경제학",
+        "교통공학 및 실험",
+        "현대 문화와 기독교",
+        "컴퓨터와 마음",
+        "재료역학 및 실험",
+        "구조역학 1",
+        "도로공학",
+        "응용동역학",
+        "기초유체역학 및 실험",
+        "건설환경통계학",
+        "지하수 및 토양오염",
+        "수자원 계획 및 관리",
+        "공간정보공학",
+        "토질역학",
+        "교통계획 및 실험",
+        "철근 콘크리트 이론 및 실험1",
+        "수리학 및 실험",
+        "포장공학",
+        "대학영어 1",
+        "미국 문화와 현대사회의 이해",
+        "배드민턴 초급",
+        "과학과 기술 글쓰기",
+        "화학 ( 영어 강의)",
+        "화학실험",
+        "금융경제세미나",
+        "건설시공학",
+        "대중교통공학",
+        "토질공학",
+        "수영 3",
+        "산업경제 세미나"
+      ]
+    },
+    {
+      "title": "북한대학원대학교 북한경제/IT 석사",
+      "courses": [
+        "북한경제론",
+        "국제정치론",
+        "한반도국제냉전사연구",
+        "한반도통일외교세미나",
+        "체제전환과 법제도",
+        "북한국토개발론",
+        "북한이탈주민연구",
+        "북한경제시장화연구"
+      ]
+    },
+    {
+      "title": "서울대 행정대학원 행정학 석사",
+      "courses": [
+        "경제분석",
+        "계량분석",
+        "거시경제이론",
+        "재정학",
+        "행정법",
+        "특강 ( 공직역량개발 )",
+        "대학원논문연구",
+        "행정이론",
+        "조사방법론",
+        "정책이론",
+        "대학원논문연구"
+      ]
+    },
+    {
+      "title": "서울대학교 박사과정 건설환경공학부 스마트도시공학 전공",
+      "courses": [
+        "도시 및 지역계획특론(부동산개발론)",
+        "대학원논문연구",
+        "ICT기반 스마트 건축",
+        "스마트 도시공학 개론",
+        "도시재개발론",
+        "도시공간구조론",
+        "도시사회론",
+        "인프라스피어 세미나",
+        "도시 및 지구환경경제론",
+        "기술사업화론(이론과 전략)",
+        "스마트시티 법 제도와 정책",
+        "대학원 논문연구"
+      ]
+    }
+  ],
+  "syncedAt": "2026-07-20T22:05:59.520Z",
+  "contentHash": "153397ae850365b36a3b45fa00e4e0ab70d89d3d6f9e5e15fac4e775ceb951ba"
+}
