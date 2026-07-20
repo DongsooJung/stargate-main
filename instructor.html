@@ -25,6 +25,14 @@
   .teacher-heading p{color:var(--sg-mute);margin:0}
   .teacher-list{margin:14px 0 0;padding-left:20px;color:var(--sg-mute);font-size:14px}
   .teacher-list li{margin:8px 0}
+  .sync-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .sync-status{display:flex;align-items:center;gap:8px;color:var(--sg-mute);font-size:12px;margin-top:14px}
+  .sync-status::before{content:"";width:8px;height:8px;border-radius:50%;background:#3baa70;box-shadow:0 0 0 4px rgba(59,170,112,.12)}
+  .course-groups{display:grid;gap:10px;margin-top:18px}
+  .course-group{background:#fff;border:1px solid var(--sg-line);border-radius:12px;padding:0 18px}
+  .course-group summary{cursor:pointer;padding:16px 0;color:var(--sg-navy);font-weight:700}
+  .course-group ul{margin:0 0 18px;padding-left:20px;color:var(--sg-mute);columns:2;column-gap:30px;font-size:13px}
+  .course-group li{margin:5px 0;break-inside:avoid}
   .platform-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   .platform-card{display:flex;min-height:190px;flex-direction:column;background:#fff;border:1px solid var(--sg-line);border-radius:16px;padding:24px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
   .platform-card:hover{transform:translateY(-3px);border-color:var(--sg-gold);box-shadow:0 12px 28px rgba(15,29,56,.08)}
@@ -36,7 +44,7 @@
   .contact-panel h2{margin:0 0 8px;font-size:27px}.contact-panel p{margin:0;color:rgba(255,255,255,.72)}
   .contact-button{display:inline-flex;flex:0 0 auto;background:var(--sg-gold);color:var(--sg-navy);padding:12px 18px;border-radius:10px;font-weight:800}
   .profile-updated{color:var(--sg-mute);font-size:12px;margin-top:16px}
-  @media(max-width:760px){.platform-grid{grid-template-columns:1fr}.contact-panel{align-items:flex-start;flex-direction:column}.platform-card{min-height:160px}}
+  @media(max-width:760px){.platform-grid,.sync-grid{grid-template-columns:1fr}.contact-panel{align-items:flex-start;flex-direction:column}.platform-card{min-height:160px}.course-group ul{columns:1}}
 </style>
 <script type="application/ld+json">
 {
@@ -97,6 +105,28 @@
     </article>
   </section>
 
+  <section class="sg-section" id="google-sites-sync" aria-labelledby="sync-title">
+    <div class="teacher-heading">
+      <div class="sg-card__tag">AUTO SYNC · GOOGLE SITES</div>
+      <h2 id="sync-title">Google Sites 학력·경력 자동 동기화</h2>
+      <p>공개 프로필의 소속 경력, 학력과 전공 수강이력을 매일 확인해 변경된 경우에만 갱신합니다.</p>
+      <div class="sync-status" id="sync-status">동기화 데이터를 확인하는 중입니다.</div>
+    </div>
+    <div class="sync-grid">
+      <article class="sg-card">
+        <div class="sg-card__tag">AFFILIATION</div>
+        <h3 class="sg-card__title">소속·경력</h3>
+        <ul class="teacher-list" id="synced-affiliations"><li>Google Sites 데이터를 준비하고 있습니다.</li></ul>
+      </article>
+      <article class="sg-card">
+        <div class="sg-card__tag">EDUCATION</div>
+        <h3 class="sg-card__title">학력</h3>
+        <ul class="teacher-list" id="synced-education"><li>Google Sites 데이터를 준비하고 있습니다.</li></ul>
+      </article>
+    </div>
+    <div class="course-groups" id="synced-course-groups"></div>
+  </section>
+
   <section class="sg-section" aria-labelledby="platform-title">
     <div class="teacher-heading">
       <div class="sg-card__tag">CLASS PLATFORMS</div>
@@ -149,6 +179,23 @@
       document.getElementById('contact-button').href = `mailto:${encodeURIComponent(profile.contact.email)}?subject=${subject}`;
     })
     .catch((error) => console.warn(error.message));
+
+  fetch('./data/google-sites-profile.json', {cache: 'no-store'})
+    .then((response) => {
+      if (!response.ok) throw new Error('Google Sites 동기화 데이터를 불러오지 못했습니다.');
+      return response.json();
+    })
+    .then((sync) => {
+      document.getElementById('synced-affiliations').innerHTML = sync.affiliations.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      document.getElementById('synced-education').innerHTML = sync.education.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      document.getElementById('synced-course-groups').innerHTML = sync.courseGroups.map((group) => `<details class="course-group"><summary>${escapeHtml(group.title)} · ${group.courses.length}과목</summary><ul>${group.courses.map((course) => `<li>${escapeHtml(course)}</li>`).join('')}</ul></details>`).join('');
+      const syncedAt = new Date(sync.syncedAt).toLocaleString('ko-KR', {timeZone: 'Asia/Seoul'});
+      document.getElementById('sync-status').textContent = `최근 동기화: ${syncedAt} · 변경 감지 시 자동 갱신`;
+    })
+    .catch((error) => {
+      document.getElementById('sync-status').textContent = '자동 동기화 자료를 일시적으로 표시할 수 없습니다.';
+      console.warn(error.message);
+    });
 }());
 </script>
 <script src="./스타게이트 통합 네비.js?v=260720a" data-site="main"></script>
