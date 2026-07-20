@@ -1,0 +1,59 @@
+{
+  "updatedAt": "2026-07-20",
+  "name": "정동수",
+  "nameEn": "Dongsoo Jung",
+  "headline": "수학 · 알고리즘 · AI 융합 교육",
+  "summary": "수학적 사고를 알고리즘과 실제 데이터 문제로 확장하는 수업을 설계합니다. 학습자의 현재 수준과 목표를 진단한 뒤 개념, 문제 해결, 구현, 피드백을 연결합니다.",
+  "audiences": [
+    "중·고등 수학 심화 학습자",
+    "KOI·알고리즘 입문 및 심화 학습자",
+    "Python 기반 문제 해결을 시작하는 학습자",
+    "수학·정보 융합 특강이 필요한 학교·기관"
+  ],
+  "subjects": [
+    {
+      "title": "수학 사고력·심화",
+      "description": "개념을 암기하는 데 그치지 않고 조건 분석, 풀이 설계, 검산과 설명까지 반복합니다."
+    },
+    {
+      "title": "KOI·알고리즘",
+      "description": "문제 분해, 자료구조, 알고리즘 선택과 시간복잡도 판단을 코드 구현과 함께 훈련합니다."
+    },
+    {
+      "title": "Python·데이터 융합",
+      "description": "수학 모델을 Python으로 구현하고 데이터·GIS 사례까지 연결하는 프로젝트형 수업입니다."
+    }
+  ],
+  "credentials": [
+    "서울대학교 공과대학 지구환경시스템공학부 졸업",
+    "서울대학교 건설환경공학부 스마트도시공학 박사과정 수료",
+    "서울대학교 행정대학원 행정학 석사",
+    "북한대학원대학교 북한학 석사(경제·IT)",
+    "대치동 KOI 강사 경력",
+    "Python·GIS·공간계량 분석 연구"
+  ],
+  "platforms": [
+    {
+      "name": "크몽",
+      "label": "크몽에서 강의·자료 확인",
+      "url": "https://kmong.com/",
+      "profileVerified": false
+    },
+    {
+      "name": "숨고",
+      "label": "숨고에서 수업 상담",
+      "url": "https://soomgo.com/",
+      "profileVerified": false
+    },
+    {
+      "name": "김과외",
+      "label": "김과외에서 선생님 찾기",
+      "url": "https://kimstudy.com/",
+      "profileVerified": false
+    }
+  ],
+  "contact": {
+    "email": "ceo@stargateedu.co.kr",
+    "subject": "[STARGATE EDU] 수학·알고리즘 수업 문의"
+  }
+}
