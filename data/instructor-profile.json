@@ -4,6 +4,11 @@
   "nameEn": "Dongsoo Jung",
   "headline": "수학 · 알고리즘 · AI 융합 교육",
   "summary": "수학적 사고를 알고리즘과 실제 데이터 문제로 확장하는 수업을 설계합니다. 학습자의 현재 수준과 목표를 진단한 뒤 개념, 문제 해결, 구현, 피드백을 연결합니다.",
+  "externalProfile": {
+    "name": "Google Sites",
+    "label": "전체 이력·교육 프로필 보기",
+    "url": "https://sites.google.com/view/jungdongsoo"
+  },
   "audiences": [
     "중·고등 수학 심화 학습자",
     "KOI·알고리즘 입문 및 심화 학습자",
