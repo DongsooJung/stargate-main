@@ -18,7 +18,7 @@ portal.stargateedu.co.kr 정적 사이트 (GitHub Pages 호스팅).
 
 ### 강사 홍보자료 업데이트
 
-`data/instructor-profile.json`만 수정하면 `instructor.html`의 소개, 강의 분야, 학력·경력, 플랫폼 링크가 자동 갱신됩니다. 크몽·숨고·김과외 개인 프로필을 개설한 뒤 각 `url`을 프로필 주소로 교체하고 `profileVerified`를 `true`로 바꾸세요.
+`data/instructor-profile.json`만 수정하면 `instructor.html`의 소개, 강의 분야, 학력·경력, Google Sites 프로필과 플랫폼 링크가 자동 갱신됩니다. 크몽·숨고·김과외 개인 프로필을 개설한 뒤 각 `url`을 프로필 주소로 교체하고 `profileVerified`를 `true`로 바꾸세요.
 
 ## 운영
 주식회사 별의문 (Stargate Corporation) · ceo@stargateedu.co.kr
