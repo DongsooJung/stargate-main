@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STARGATE 입찰 준비센터 | 주식회사 별의문</title>
+<meta name="description" content="주식회사 별의문의 나라장터 공공조달 및 위시켓 소프트웨어 프로젝트 참여를 위한 실무 체크리스트와 제안서 준비체계입니다.">
+<link rel="canonical" href="https://portal.stargateedu.co.kr/procurement-center.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./스타게이트 통합 네비.css?v=260721a">
+<style>
+  .pc-hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+  .pc-btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:10px;font-size:14px;font-weight:700;border:1px solid var(--sg-navy)}
+  .pc-btn--primary{background:var(--sg-navy);color:#fff}
+  .pc-btn--ghost{background:#fff;color:var(--sg-navy)}
+  .pc-btn:hover{background:var(--sg-gold);border-color:var(--sg-gold);color:var(--sg-navy)}
+  .pc-progress{background:linear-gradient(135deg,var(--sg-navy),#1a2a52);color:#fff;border-radius:16px;padding:28px;margin-bottom:24px}
+  .pc-progress__head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:15px}
+  .pc-progress h2{font-size:24px;margin:0 0 5px}
+  .pc-progress p{margin:0;color:rgba(255,255,255,.72);font-size:13px}
+  .pc-progress__number{font-size:30px;font-weight:800;color:var(--sg-gold);white-space:nowrap}
+  .pc-progress__track{height:10px;border-radius:999px;background:rgba(255,255,255,.16);overflow:hidden}
+  .pc-progress__bar{height:100%;width:0;background:linear-gradient(90deg,var(--sg-gold),#f5d98c);transition:width .25s}
+  .check-card{background:#fff;border:1px solid var(--sg-line);border-radius:14px;padding:24px}
+  .check-card h2{font-size:20px;margin:0 0 6px}
+  .check-card__desc{font-size:13px;color:var(--sg-mute);margin:0 0 16px}
+  .check-list{display:grid;gap:9px}
+  .check-item{display:grid;grid-template-columns:22px 1fr;gap:9px;align-items:start;padding:10px;border-radius:9px;background:#f8f9fb;cursor:pointer}
+  .check-item:hover{background:#f1f3f7}
+  .check-item input{width:17px;height:17px;margin-top:2px;accent-color:var(--sg-gold)}
+  .check-item strong{display:block;font-size:14px}
+  .check-item small{display:block;color:var(--sg-mute);font-size:12px;margin-top:2px}
+  .pc-badge{display:inline-block;padding:3px 8px;border-radius:999px;background:#fff4d6;color:#765708;font-size:10px;font-weight:800;margin-left:5px;vertical-align:2px}
+  .pc-steps{counter-reset:step;display:grid;gap:12px}
+  .pc-step{counter-increment:step;background:#fff;border:1px solid var(--sg-line);border-radius:12px;padding:20px;display:grid;grid-template-columns:38px 1fr;gap:13px}
+  .pc-step::before{content:counter(step);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--sg-gold);color:var(--sg-navy);font-weight:800}
+  .pc-step h3{font-size:16px;margin:0 0 4px}
+  .pc-step p{font-size:13px;color:var(--sg-mute);margin:0}
+  .pc-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .pc-link{background:#fff;border:1px solid var(--sg-line);border-radius:11px;padding:16px;transition:.15s}
+  .pc-link:hover{border-color:var(--sg-gold);transform:translateY(-2px)}
+  .pc-link strong{display:block;font-size:14px;margin-bottom:3px}
+  .pc-link span{font-size:12px;color:var(--sg-mute)}
+  .pc-note{font-size:12px;color:var(--sg-mute);margin-top:18px;line-height:1.7}
+  .pc-cta{background:#fff;border:1px solid var(--sg-line);border-radius:16px;padding:32px;text-align:center}
+  .pc-cta h2{margin:0 0 8px}
+  .pc-cta p{max-width:650px;margin:0 auto 20px;color:var(--sg-mute)}
+  @media(max-width:640px){.pc-progress__head{align-items:start;flex-direction:column}.pc-step{grid-template-columns:34px 1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"STARGATE 입찰 준비센터",
+  "url":"https://portal.stargateedu.co.kr/procurement-center.html",
+  "about":{"@type":"Organization","name":"주식회사 별의문","url":"https://portal.stargateedu.co.kr/"}
+}
+</script>
+</head>
+<body>
+<main>
+  <section class="sg-hero">
+    <div class="sg-hero__eyebrow">★ PROCUREMENT READINESS CENTER</div>
+    <h1 class="sg-hero__title">나라장터·소프트웨어 입찰을<br>한 번에 준비합니다</h1>
+    <p class="sg-hero__lead">공고 발견부터 자격 판정, 제안서·가격서 작성, 투찰과 계약까지 필요한 준비물을 관리하는 STARGATE 실무 체크리스트입니다. 체크 상태는 이 브라우저에만 저장됩니다.</p>
+    <div class="pc-hero-actions">
+      <a class="pc-btn pc-btn--primary" href="https://www.g2b.go.kr/" target="_blank" rel="noopener noreferrer">나라장터 열기 →</a>
+      <a class="pc-btn pc-btn--ghost" href="https://www.wishket.com/project/" target="_blank" rel="noopener noreferrer">위시켓 프로젝트 →</a>
+      <a class="pc-btn pc-btn--ghost" href="./monetization.html">수익화 전략 보기 →</a>
+    </div>
+  </section>
+
+  <section class="sg-section" style="padding-bottom:24px">
+    <div class="pc-progress" aria-live="polite">
+      <div class="pc-progress__head">
+        <div><h2>입찰 준비도</h2><p id="progress-text">체크리스트를 완료하면 준비도가 자동 계산됩니다.</p></div>
+        <div class="pc-progress__number" id="progress-number">0%</div>
+      </div>
+      <div class="pc-progress__track" role="progressbar" aria-label="입찰 준비도" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="pc-progress__bar" id="progress-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section" id="checklist">
+    <div class="sg-grid">
+      <article class="check-card">
+        <div class="sg-card__tag">A · CORPORATE</div>
+        <h2>법인 기본서류</h2>
+        <p class="check-card__desc">유효기간과 발급일 기준은 공고문을 우선합니다.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox" data-check="corp-1"><span><strong>사업자등록증</strong><small>최신 소재지·업태·종목 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="corp-2"><span><strong>법인 등기사항증명서</strong><small>상호·대표자·본점 주소 일치 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="corp-3"><span><strong>법인인감증명서·사용인감계</strong><small>전자·방문 제출 방식별 날인 준비</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="corp-4"><span><strong>국세·지방세 납세증명서</strong><small>제출일 현재 유효기간 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="corp-5"><span><strong>4대보험 관련 증명</strong><small>가입자명부·완납증명 등 공고 요구사항 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="corp-6"><span><strong>대표자·대리인 서류</strong><small>위임장·재직증명서·신분 확인자료</small></span></label>
+        </div>
+      </article>
+
+      <article class="check-card">
+        <div class="sg-card__tag">B · G2B</div>
+        <h2>나라장터 기본설정</h2>
+        <p class="check-card__desc">회원가입만으로 투찰 가능한지 단정하지 말고 등록 상태를 확인합니다.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox" data-check="g2b-1"><span><strong>경쟁입찰참가자격 등록</strong><small>업체정보·입찰대리인·등록 업종 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="g2b-2"><span><strong>전자서명·인증수단 점검</strong><small>투찰 PC와 인증서 유효기간 사전 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="g2b-3"><span><strong>입찰참가자격등록증 출력</strong><small>공고 요구 시 즉시 제출할 PDF 보관</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="g2b-4"><span><strong>업종·품목 코드 매칭</strong><small>공고의 참가자격 코드와 등록정보 대조</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="g2b-5"><span><strong>입찰보증 방식 확인</strong><small>보증서·지급각서·면제 여부는 공고문 기준</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="g2b-6"><span><strong>투찰 마감 리허설</strong><small>제출 마감 전 파일·가격·전자제출 절차 재검증</small></span></label>
+        </div>
+      </article>
+
+      <article class="check-card">
+        <div class="sg-card__tag">C · CONDITIONAL</div>
+        <h2>공고별 선택요건 <span class="pc-badge">해당 시</span></h2>
+        <p class="check-card__desc">모든 입찰에 공통으로 필요한 항목이 아닙니다.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox" data-check="cond-1"><span><strong>중소기업·소상공인 확인서</strong><small>제한경쟁 또는 우대조건 적용 여부 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="cond-2"><span><strong>직접생산확인증명서</strong><small>중소기업자간 경쟁제품 및 세부품명 기준 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="cond-3"><span><strong>SW사업자 일반 현황 관리확인서</strong><small>소프트웨어 사업 공고에서 요구하는지 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="cond-4"><span><strong>신용평가등급확인서</strong><small>적격심사·정량평가 반영 여부 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="cond-5"><span><strong>유사사업 실적증명</strong><small>계약서·세금계산서가 아닌 지정양식 요구 가능</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="cond-6"><span><strong>공동수급·하도급 계획</strong><small>허용 방식·지분·승인절차를 공고문에서 확인</small></span></label>
+        </div>
+      </article>
+
+      <article class="check-card">
+        <div class="sg-card__tag">D · PROPOSAL</div>
+        <h2>제안·가격 패키지</h2>
+        <p class="check-card__desc">정량·정성·가격 파일을 분리해 제출 오류를 줄입니다.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox" data-check="prop-1"><span><strong>RFP 요구사항 추적표</strong><small>요구사항별 대응내용·산출물·담당자 매핑</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="prop-2"><span><strong>기술제안서·발표자료</strong><small>평가항목 순서와 배점에 맞춰 구성</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="prop-3"><span><strong>투입인력·수행조직</strong><small>역할·경력·참여율·증빙 일치 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="prop-4"><span><strong>가격산출내역·전자투찰가</strong><small>부가세·단위·총액·파일 간 금액 일치 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="prop-5"><span><strong>보안·청렴·서약서</strong><small>발주기관 지정양식과 날인 위치 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="prop-6"><span><strong>최종 제출본 교차검수</strong><small>파일명·용량·암호·PDF 변환·누락 확인</small></span></label>
+        </div>
+      </article>
+
+      <article class="check-card">
+        <div class="sg-card__tag">E · WISHKET</div>
+        <h2>민간 프로젝트 준비</h2>
+        <p class="check-card__desc">프로필과 유사 포트폴리오가 지원서 경쟁력을 좌우합니다.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox" data-check="wish-1"><span><strong>법인 파트너 프로필</strong><small>회사 소개·기술·연혁·연락처 최신화</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="wish-2"><span><strong>핵심 포트폴리오 등록</strong><small>AI·GIS·교육·대시보드 사례 중심 구성</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="wish-3"><span><strong>표준 지원서 템플릿</strong><small>이해도·접근법·일정·견적·질문을 구조화</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="wish-4"><span><strong>미팅 질문지</strong><small>범위·데이터·권한·검수·하자보수 조건 확인</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="wish-5"><span><strong>계약·대금조건 검토</strong><small>마일스톤·변경관리·지식재산 귀속 명확화</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="wish-6"><span><strong>완료 후 실적 자산화</strong><small>검수자료·고객평가·포트폴리오 공개범위 합의</small></span></label>
+        </div>
+      </article>
+
+      <article class="check-card">
+        <div class="sg-card__tag">F · PIPELINE</div>
+        <h2>수주 파이프라인</h2>
+        <p class="check-card__desc">입찰 여부를 감으로 결정하지 않고 기준화합니다.</p>
+        <div class="check-list">
+          <label class="check-item"><input type="checkbox" data-check="pipe-1"><span><strong>목표분야 키워드 설정</strong><small>스마트도시·공간정보·AI·교육·데이터</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="pipe-2"><span><strong>공고 적합도 평가</strong><small>자격·예산·기간·실적·경쟁강도 기준</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="pipe-3"><span><strong>Go / No-Go 승인</strong><small>기대수익 대비 제안비용과 리스크 검토</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="pipe-4"><span><strong>마감 캘린더 등록</strong><small>질의·서류·투찰·발표·계약 일정 관리</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="pipe-5"><span><strong>결과·피드백 기록</strong><small>평가결과를 다음 제안서 템플릿에 반영</small></span></label>
+          <label class="check-item"><input type="checkbox" data-check="pipe-6"><span><strong>월간 KPI 점검</strong><small>탐색·검토·지원·미팅·수주 전환율 관리</small></span></label>
+        </div>
+      </article>
+    </div>
+    <p class="pc-note">※ 체크표는 내부 준비를 돕는 일반 안내입니다. 실제 참가자격, 증명서 유효성, 입찰보증, 공동수급 및 제출형식은 해당 공고문·제안요청서와 발주기관 안내를 최우선으로 확인해야 합니다.</p>
+  </section>
+
+  <section class="sg-section" aria-labelledby="workflow-title">
+    <div class="sg-card__tag">BID WORKFLOW</div>
+    <h2 id="workflow-title" style="font-size:28px;margin:0 0 18px">입찰 실행 절차</h2>
+    <div class="pc-steps">
+      <article class="pc-step"><div><h3>공고 탐색·1차 필터링</h3><p>사업 분야, 예산, 지역·기업규모 제한과 제출기한을 먼저 확인합니다.</p></div></article>
+      <article class="pc-step"><div><h3>참가자격·수익성 판정</h3><p>필수 업종·증명·실적 보유 여부와 수행원가를 확인하고 Go/No-Go를 결정합니다.</p></div></article>
+      <article class="pc-step"><div><h3>요구사항·제안전략 설계</h3><p>RFP 추적표를 만들고 평가항목별 차별점, 인력, 일정과 산출물을 확정합니다.</p></div></article>
+      <article class="pc-step"><div><h3>서류·가격·전자제출</h3><p>정량서류와 기술·가격 파일의 일치 여부를 교차검수하고 마감 전에 제출합니다.</p></div></article>
+      <article class="pc-step"><div><h3>발표·협상·계약 인수</h3><p>질의응답, 기술협상, 계약조건, 착수계와 보안서류까지 연결해 수행에 착수합니다.</p></div></article>
+    </div>
+  </section>
+
+  <section class="sg-section" aria-labelledby="official-title">
+    <div class="sg-card__tag">OFFICIAL LINKS</div>
+    <h2 id="official-title" style="font-size:28px;margin:0 0 18px">공식 확인 채널</h2>
+    <div class="pc-links">
+      <a class="pc-link" href="https://www.g2b.go.kr/" target="_blank" rel="noopener noreferrer"><strong>나라장터</strong><span>입찰공고·업체등록·전자투찰</span></a>
+      <a class="pc-link" href="https://www.smpp.go.kr/" target="_blank" rel="noopener noreferrer"><strong>공공구매종합정보망</strong><span>직접생산확인·중소기업제품 정보</span></a>
+      <a class="pc-link" href="https://www.sminfo.mss.go.kr/" target="_blank" rel="noopener noreferrer"><strong>중소기업현황정보시스템</strong><span>중소기업 확인 관련 업무</span></a>
+      <a class="pc-link" href="https://www.sw.or.kr/" target="_blank" rel="noopener noreferrer"><strong>한국인공지능·소프트웨어산업협회</strong><span>SW사업자 확인 관련 안내</span></a>
+      <a class="pc-link" href="https://support.wishket.com/customer-support/partner/use-guide/" target="_blank" rel="noopener noreferrer"><strong>위시켓 파트너 이용방법</strong><span>프로필·지원·미팅·계약 절차</span></a>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <div class="pc-cta">
+      <div class="sg-card__tag">BID REVIEW</div>
+      <h2>검토할 공고가 있다면 보내주세요</h2>
+      <p>공고 URL, 제안요청서와 마감일을 보내주시면 자격요건·제출서류·기술범위·예상 투입을 기준으로 참여 적합성을 검토합니다.</p>
+      <a class="pc-btn pc-btn--primary" href="mailto:ceo@stargateedu.co.kr?subject=%5BSTARGATE%5D%20%EC%9E%85%EC%B0%B0%20%EA%B3%B5%EA%B3%A0%20%EA%B2%80%ED%86%A0%20%EC%9A%94%EC%B2%AD">입찰 검토 요청 →</a>
+    </div>
+  </section>
+</main>
+
+<script src="./스타게이트 통합 네비.js?v=260721a" data-site="main"></script>
+<script>
+(() => {
+  const storageKey = "stargate-procurement-checklist-v1";
+  const boxes = [...document.querySelectorAll("[data-check]")];
+  const bar = document.getElementById("progress-bar");
+  const number = document.getElementById("progress-number");
+  const text = document.getElementById("progress-text");
+  const track = document.querySelector('[role="progressbar"]');
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+    boxes.forEach(box => { box.checked = Boolean(saved[box.dataset.check]); });
+  } catch (_) {}
+
+  function update() {
+    const complete = boxes.filter(box => box.checked).length;
+    const percent = Math.round((complete / boxes.length) * 100);
+    bar.style.width = percent + "%";
+    number.textContent = percent + "%";
+    text.textContent = complete + " / " + boxes.length + "개 항목 완료 · 체크 상태는 현재 브라우저에 저장됩니다.";
+    track.setAttribute("aria-valuenow", String(percent));
+    const state = Object.fromEntries(boxes.map(box => [box.dataset.check, box.checked]));
+    try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch (_) {}
+  }
+
+  boxes.forEach(box => box.addEventListener("change", update));
+  update();
+})();
+</script>
+</body>
+</html>
