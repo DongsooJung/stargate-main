@@ -18,6 +18,8 @@
   .teacher-lead{max-width:780px}
   .teacher-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
   .teacher-chip{display:inline-flex;padding:7px 11px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:rgba(255,255,255,.82);font-size:13px}
+  .teacher-profile-link{display:inline-flex;margin-top:24px;padding:11px 16px;border-radius:10px;background:var(--sg-gold);color:var(--sg-navy);font-weight:800}
+  .teacher-profile-link:hover{transform:translateY(-1px)}
   .teacher-heading{max-width:760px;margin-bottom:24px}
   .teacher-heading h2{font-size:30px;line-height:1.3;margin:0 0 10px}
   .teacher-heading p{color:var(--sg-mute);margin:0}
@@ -45,6 +47,7 @@
   "url":"https://portal.stargateedu.co.kr/instructor.html",
   "jobTitle":"수학·알고리즘 강사",
   "worksFor":{"@type":"Organization","name":"주식회사 별의문","url":"https://portal.stargateedu.co.kr/"},
+  "sameAs":["https://sites.google.com/view/jungdongsoo"],
   "knowsAbout":["수학 교육","알고리즘","한국정보올림피아드","Python","AI 교육"]
 }
 </script>
@@ -61,6 +64,7 @@
       <span class="teacher-chip">Python 문제 해결</span>
       <span class="teacher-chip">학교·기관 특강</span>
     </div>
+    <a class="teacher-profile-link" id="external-profile-link" href="https://sites.google.com/view/jungdongsoo" target="_blank" rel="noopener noreferrer">Google Sites 전체 프로필 →</a>
   </section>
 
   <section class="sg-section" aria-labelledby="class-title">
@@ -134,6 +138,8 @@
       document.getElementById('teacher-name').textContent = profile.name;
       document.getElementById('teacher-headline').textContent = profile.headline;
       document.getElementById('teacher-summary').textContent = profile.summary;
+      document.getElementById('external-profile-link').href = profile.externalProfile.url;
+      document.getElementById('external-profile-link').textContent = `${profile.externalProfile.name} ${profile.externalProfile.label} →`;
       document.getElementById('audience-list').innerHTML = profile.audiences.map((item) => `<span class="teacher-chip">${escapeHtml(item)}</span>`).join('');
       document.getElementById('subject-grid').innerHTML = profile.subjects.map((subject, index) => `<article class="sg-card"><div class="sg-card__tag">${escapeHtml(tags[index] || 'CLASS')}</div><h3 class="sg-card__title">${escapeHtml(subject.title)}</h3><p class="sg-card__desc">${escapeHtml(subject.description)}</p></article>`).join('');
       document.getElementById('credential-list').innerHTML = profile.credentials.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
