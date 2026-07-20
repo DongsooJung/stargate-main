@@ -16,13 +16,13 @@
     },
     blog: {
       name: "스타게이트 블로그",
-      url: "https://blog.stargateshop.co.kr",
+      url: "https://blog.stargateedu.co.kr",
       label: "블로그",
       tag: "STARGATE BLOG",
     },
     shop: {
       name: "스타게이트 쇼핑몰",
-      url: "https://stargateshop.co.kr",
+      url: "https://shop.stargateedu.co.kr",
       label: "쇼핑몰",
       tag: "STARGATE SHOP",
     },
@@ -103,7 +103,7 @@
     <div class="sg-footer__col">
       <h4>주식회사 별의문 (Stargate Corporation)</h4>
       <p style="margin:4px 0;line-height:1.7">
-        대표 정동수 | 서울시 강남구 대치동 930-21, 2층<br>
+        대표 정동수 | 서울특별시 강남구 강남대로112길 47<br>
         <a href="mailto:ceo@stargateedu.co.kr">ceo@stargateedu.co.kr</a>
       </p>
     </div>
@@ -114,6 +114,7 @@
     <div class="sg-footer__col">
       <h4>사업영역</h4>
       <a href="${SITES.main.url}">AI · 공간계량</a>
+      <a href="${SITES.main.url}/monetization.html">수익화 전략</a>
       <a href="${SITES.shop.url}">디지털 상품</a>
       <a href="${SITES.edushop.url}">교육 스토어</a>
       <a href="${SITES.blog.url}">연구 블로그</a>
