@@ -116,7 +116,6 @@
       <a href="${SITES.main.url}/procurement-center.html">입찰 준비센터</a>
       <a href="${SITES.main.url}">AI · 공간계량</a>
       <a href="${SITES.main.url}/monetization.html">수익화 전략</a>
-      <a href="${SITES.main.url}/bukangi.html">부캉이 상황실</a>
       <a href="${SITES.shop.url}">디지털 상품</a>
       <a href="${SITES.edushop.url}">교육 스토어</a>
       <a href="${SITES.blog.url}">연구 블로그</a>
