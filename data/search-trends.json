@@ -1,0 +1,55 @@
+{
+  "updated": "2026-11-13",
+  "month": "2026-11",
+  "note": "월별 인기 검색어 데이터 (교육·앱·수학·KOI 관련 중심, 일반 트렌드 포함). 실시간 자동 수집이 아닌 큐레이터된 스냅샷입니다. 매월 업데이트 가능.",
+  "sources": {
+    "appstore": {
+      "title": "앱스토어 / Google Play",
+      "description": "교육·수학·올림피아드 관련 인기 앱 및 검색어",
+      "keywords": [
+        {"rank": 1, "term": "Duolingo", "category": "언어학습", "note": "교육 카테고리 1위"},
+        {"rank": 2, "term": "메가스터디 스마트러닝", "category": "고등·수능", "note": "인강 학습앱"},
+        {"rank": 3, "term": "KOI 올림피아드", "category": "정보올림피아드", "note": "대치동 영재교육 관련"},
+        {"rank": 4, "term": "수학 문제 풀이 앱", "category": "수학", "note": "AI 채점·올림피아드 대비"},
+        {"rank": 5, "term": "스타게이트 KOI", "category": "영재교육", "note": "본사 앱 관련 검색"},
+        {"rank": 6, "term": "ChatGPT 교육", "category": "AI 학습", "note": "수학·알고리즘 보조"},
+        {"rank": 7, "term": "토도수학", "category": "초등·수학", "note": "유아 수학 앱"},
+        {"rank": 8, "term": "고등학생 수학 인강", "category": "고등교육", "note": "수능·내신 대비"}
+      ]
+    },
+    "naver": {
+      "title": "네이버",
+      "description": "교육·수학·KOI·앱 관련 인기 검색어 (일반 트렌드 포함)",
+      "keywords": [
+        {"rank": 1, "term": "KOI 2026 기출", "category": "정보올림피아드", "note": "한국정보올림피아드 준비"},
+        {"rank": 2, "term": "수학 올림피아드 KMO", "category": "수학영재", "note": "중·고등 영재 대회"},
+        {"rank": 3, "term": "대치동 수학 학원", "category": "영재교육", "note": "스타게이트 관련 지역"},
+        {"rank": 4, "term": "ChatGPT 수학 문제", "category": "AI 학습", "note": "생성형 AI 활용"},
+        {"rank": 5, "term": "정보 올림피아드 학원", "category": "KOI", "note": "알고리즘 학습"},
+        {"rank": 6, "term": "고등학생 공부 스케줄", "category": "입시", "note": "수능 준비 기간"},
+        {"rank": 7, "term": "네이버 AI 브리핑", "category": "검색 트렌드", "note": "요약 검색 이용 증가"},
+        {"rank": 8, "term": "스타게이트에듀", "category": "브랜드", "note": "교육 플랫폼 검색"}
+      ]
+    },
+    "google": {
+      "title": "구글",
+      "description": "구글 트렌드 기반 교육·AI·앱 관련 급상승 검색어",
+      "keywords": [
+        {"rank": 1, "term": "AI math solver", "category": "AI 교육", "note": "수학 AI 채점 도구"},
+        {"rank": 2, "term": "KOI problem archive", "category": "올림피아드", "note": "기출 문제 검색"},
+        {"rank": 3, "term": "best education apps Korea", "category": "앱스토어", "note": "교육 앱 랭킹"},
+        {"rank": 4, "term": "ChatGPT for students", "category": "AI", "note": "학습 보조 활용"},
+        {"rank": 5, "term": "math olympiad problems", "category": "수학", "note": "KMO/IMO 준비"},
+        {"rank": 6, "term": "고등학생 수학 공부법", "category": "교육", "note": "영재·수능 관련"},
+        {"rank": 7, "term": "spatial data AI", "category": "연구", "note": "공간계량·도시 데이터"},
+        {"rank": 8, "term": "Stargate Edu app", "category": "브랜드", "note": "본사 서비스 검색"}
+      ]
+    }
+  },
+  "strategy": [
+    "KOI·수학 올림피아드 관련 검색 수요가 지속적으로 높음 → 앱 내 기출 아카이브·AI 채점 강화 전략",
+    "교육 앱(Duolingo, 메가스터디 등) 검색 다수 → ASO(앱스토어 최적화) 키워드 대상으로 활용",
+    "AI 학습 도구(ChatGPT 등) 급상승 → 스타게이트 MATH AI 채점 기능 홍보 포인트",
+    "매월 이 데이터를 기반으로 컨텐츠·블로그·앱 소개 주제 선정"
+  ]
+}
