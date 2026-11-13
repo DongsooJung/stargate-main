@@ -42,6 +42,20 @@
   ]
 }
 </script>
+<style>
+  .trend-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .trend-tab { padding: 8px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--sg-line); cursor: pointer; font-size: 14px; font-weight: 500; }
+  .trend-tab.active { background: var(--sg-navy); color: #fff; border-color: var(--sg-navy); }
+  .trend-list { list-style: none; padding: 0; margin: 0; }
+  .trend-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--sg-line); }
+  .trend-item:last-child { border-bottom: none; }
+  .trend-rank { font-weight: 700; color: var(--sg-gold); min-width: 28px; }
+  .trend-term { font-weight: 600; }
+  .trend-cat { font-size: 12px; color: var(--sg-mute); background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+  .strategy-box { background: #fff; border-left: 4px solid var(--sg-gold); padding: 16px 20px; margin-top: 24px; border-radius: 0 8px 8px 0; }
+  .strategy-box ul { margin: 8px 0 0; padding-left: 18px; }
+  .strategy-box li { margin-bottom: 6px; }
+</style>
 </head>
 <body>
 
@@ -108,7 +122,7 @@
       <article class="sg-card">
         <div class="sg-card__tag">PRODUCT 2</div>
         <h3 class="sg-card__title">Stargate Edu</h3>
-        <p class="sg-card__desc">대치동 KOI 강사진이 운영하는 정보·수학 영재교육 커리큘럼 플랫폼.</p>
+        <p class="sg-card__desc">대치동 KOI 강사진이 운영하는 정보·수학 영재교육 커리큐럼 플랫폼.</p>
         <a class="sg-card__cta" href="https://shop.stargateedu.co.kr/">자세히 보기 →</a>
       </article>
       <article class="sg-card">
@@ -150,9 +164,96 @@
     </div>
   </section>
 
+  <!-- 전략 대시보드: 월별 인기 검색어 -->
+  <section class="sg-section" id="strategy-dashboard" aria-labelledby="strategy-title">
+    <div style="max-width:760px;margin-bottom:24px">
+      <div class="sg-card__tag">STRATEGY DASHBOARD · SEARCH TRENDS</div>
+      <h2 id="strategy-title" style="font-size:30px;line-height:1.3;margin:0 0 10px">월별 인기 검색어 전략 대시보드</h2>
+      <p class="sg-hero__lead" style="font-size:16px">앱스토어·네이버·구글에서 고등학생·고객이 많이 검색하는 교육·수학·KOI·AI 관련 키워드를 월별로 정리하여 업로드합니다. 컨텐츠·앱 ASO·영재교육 전략 수립에 활용하세요.</p>
+    </div>
+
+    <div class="sg-card" style="padding:28px">
+      <div class="trend-tabs" id="trend-tabs"></div>
+      <div id="trend-content">
+        <p style="color:var(--sg-mute)">데이터를 로딩 중입니다...</p>
+      </div>
+      <div class="strategy-box" id="strategy-box" style="display:none">
+        <strong>전략 포인트</strong>
+        <ul id="strategy-list"></ul>
+      </div>
+      <p style="margin:16px 0 0;font-size:12px;color:var(--sg-mute)">데이터 기준일: <span id="trend-updated"></span> · 월: <span id="trend-month"></span> · <a href="./data/search-trends.json" target="_blank">JSON 원본 보기</a></p>
+    </div>
+  </section>
 
 </main>
 
 <script src="./스타게이트 통합 네비.js?v=260923b" data-site="main"></script>
+<script>
+async function loadSearchTrends() {
+  try {
+    const res = await fetch('./data/search-trends.json');
+    if (!res.ok) throw new Error('Failed to load');
+    const data = await res.json();
+    document.getElementById('trend-updated').textContent = data.updated || '-';
+    document.getElementById('trend-month').textContent = data.month || '-';
+
+    const sources = data.sources || {};
+    const tabsEl = document.getElementById('trend-tabs');
+    const contentEl = document.getElementById('trend-content');
+    const strategyBox = document.getElementById('strategy-box');
+    const strategyList = document.getElementById('strategy-list');
+
+    const sourceKeys = Object.keys(sources);
+    if (sourceKeys.length === 0) {
+      contentEl.innerHTML = '<p>데이터가 없습니다.</p>';
+      return;
+    }
+
+    // Tabs
+    tabsEl.innerHTML = sourceKeys.map((key, idx) => 
+      `<button class="trend-tab ${idx===0?'active':''}" data-key="${key}">${sources[key].title}</button>`
+    ).join('');
+
+    function renderSource(key) {
+      const src = sources[key];
+      contentEl.innerHTML = `
+        <h3 style="margin:0 0 8px;font-size:18px">${src.title}</h3>
+        <p style="margin:0 0 16px;color:var(--sg-mute);font-size:14px">${src.description || ''}</p>
+        <ul class="trend-list">
+          ${(src.keywords || []).map(k => `
+            <li class="trend-item">
+              <div>
+                <span class="trend-rank">${k.rank}</span>
+                <span class="trend-term">${k.term}</span>
+              </div>
+              <span class="trend-cat">${k.category || ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    renderSource(sourceKeys[0]);
+
+    tabsEl.querySelectorAll('.trend-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabsEl.querySelectorAll('.trend-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderSource(btn.dataset.key);
+      });
+    });
+
+    // Strategy
+    if (data.strategy && data.strategy.length) {
+      strategyList.innerHTML = data.strategy.map(s => `<li>${s}</li>`).join('');
+      strategyBox.style.display = 'block';
+    }
+  } catch (e) {
+    document.getElementById('trend-content').innerHTML = '<p style="color:#b91c1c">데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
+    console.error(e);
+  }
+}
+loadSearchTrends();
+</script>
 </body>
 </html>
